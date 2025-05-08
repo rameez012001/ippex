@@ -129,7 +129,7 @@ body {
 	&#160; 
 	<img src="images/logos/hsg.png" class="img-fluid" style="width:15%; margin-top:20px;">
 	&#160;  &#160;  
-	<img src="images/logos/imtof_logo.png" class="img-fluid" style="width:20%; margin-top:20px;">
+	<img src="images/logos/cimtof_logo.png" class="img-fluid" style="width:20%; margin-top:20px;">
 
 
 	</div>
