@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Visitor Registration - International Machine Tools Exhibition - IMTOF</title>
+<title>Visitor Registration - International Plastics & Polymers Exhibition - IPPEX</title>
 
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=AW-11463845171">
@@ -121,7 +121,7 @@ body {
     </a>
 
     
-	<img src="images/sidebar/international_mc.png" class="img-fluid" style="width:30%;  margin-top:30px;" alt="India's Largest International Machine Tools Exhibition">
+	<img src="images/sidebar/international_mc.png" class="img-fluid" style="width:30%;  margin-top:30px;" alt="India's Largest International Plastics & Polymers Exhibition">
 
 	<a href="https://www.mmtma.in/"><img src="images/sidebar/mmtma_logo.png" class="img-fluid" style="width:15%; top:20px; margin-top:35px;" alt="MMTMA Logo"></a> &#160;  &#160;  &#160;  
 	
