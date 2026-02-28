@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>IPPEX - International Plastics & Polymers</title>
@@ -48,6 +49,31 @@
 </head>
 
 <body>
+    <div id="adpopup" class="row">
+        <div class="col-12 adpopup_container">
+            <div class="col-12 d-flex flex-column pt-3 pb-3 align-items-center adpopup_img">
+                <div class="carousel-track">
+                    <a href="https://imtof.in/skill_connect.html" class="mb-3"><img src="./images/blentrix_images/sample1.jpeg" alt=""
+                            class="img-responsive img-center" style="border: 2px solid #404040;"></a>
+                    <a href="https://imtof.in/skill_connect.html" class="mb-3"><img src="./images/blentrix_images/sample2.jpeg" alt=""
+                            class="img-responsive img-center" style="border: 2px solid #404040;"></a>
+                    <a href="https://imtof.in/skill_connect.html" class="mb-3"><img src="./images/blentrix_images/sample3.jpeg" alt=""
+                            class="img-responsive img-center" style="border: 2px solid #404040;"></a>
+                    <a href="https://imtof.in/skill_connect.html" class="mb-3"><img src="./images/blentrix_images/sample4.jpeg" alt=""
+                            class="img-responsive img-center" style="border: 2px solid #404040;"></a>
+
+                    <a href="https://imtof.in/skill_connect.html" class="mb-3"><img src="./images/blentrix_images/sample1.jpeg" alt=""
+                            class="img-responsive img-center" style="border: 2px solid #404040;"></a>
+                    <a href="https://imtof.in/skill_connect.html" class="mb-3"><img src="./images/blentrix_images/sample2.jpeg" alt=""
+                            class="img-responsive img-center" style="border: 2px solid #404040;"></a>
+                </div>
+            </div>
+        </div>
+        <div id="adpopupclose">
+            <button type="button" aria-label="Close" title="Close" style="color: #fff;">X</button>
+        </div>
+    </div>
+    <div id="adpophover"></div>
 
     <div class="boxed_wrapper">
 
@@ -174,7 +200,8 @@
                                                 <ul>
                                                     <li><a href="./images/pdf/ippexbrochure.pdf">IPPEX Brochure</a></li>
                                                     <li><a href="./images/pdf/ippexoverview.pdf">IPPEX Overview</a></li>
-                                                    <li><a href="./images/pdf/ippexbrochure.pdf">What should you expect</a></li>
+                                                    <li><a href="./images/pdf/ippexbrochure.pdf">What should you
+                                                            expect</a></li>
                                                 </ul>
                                             </li>
                                             <li><a href="contact.html">Contact</a></li>
@@ -595,7 +622,8 @@
                                 <p>Madras Machine Tools Manufacturers Association (MMTMA) has been in the forefront in
                                     promoting the machine tools industry and in presenting the latest in machine tools
                                     technology from all over the world on one platform through its Largest biennial
-                                    event, IPPEX 2026, International Plastics & Polymers Exhibition at Chennai Trade Centre,
+                                    event, IPPEX 2026, International Plastics & Polymers Exhibition at Chennai Trade
+                                    Centre,
                                     Chennai, India, during 2 - 6 April 2026.</p>
                                 <a class="btn-one" href="brief_report.html">More Details</a>
                             </div>
@@ -1666,6 +1694,22 @@
             'https://connect.facebook.net/en_US/fbevents.js');
         fbq('init', '859282986196768');
         fbq('track', 'PageView');
+
+        function closeAdPopup() {
+            var popup = document.getElementById("adpopup");
+            var overlay = document.getElementById("adpophover");
+
+            if (popup) popup.style.display = "none";
+            if (overlay) overlay.style.display = "none";
+        }
+
+
+        document.addEventListener("DOMContentLoaded", function () {
+            var closeBtn = document.querySelector("#adpopupclose button");
+            if (closeBtn) {
+                closeBtn.addEventListener("click", closeAdPopup);
+            }
+        });
     </script>
 </body>
 
