@@ -1,0 +1,460 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>IMTOF 2026 - Visitor Registration</title>
+
+  <link rel="stylesheet" href="./css/blentrix.css">
+
+</head>
+
+<body>
+<div class="topbar">
+  <div class="navwrap">
+    <div class="toplogo">
+      <div class="brand">
+        <img src="./images/blentrix_images/imtof2026.png" alt="IMTOF 2026">
+      </div>
+      <div class="brand">
+        <img src="./images/blentrix_images/date.png" alt="Dates">
+      </div>
+      <div class="brand">
+        <img src="./images/blentrix_images/ippex2026.png" alt="IPPEX 2026">
+      </div>
+    </div>
+
+    <!-- ✅ NEW: Mobile menu button -->
+    <button class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+
+    <!-- ✅ Add id="siteNav" -->
+    <div class="nav" id="siteNav">
+      <a href="./index.html">Home</a>
+      <a href="./about.html">About Exhibition</a>
+      <a href="./vis_regi_success.html">Visitor</a>
+      <a href="./contact.html">Contact</a>
+      <a href="./list_of_exhibitors.html">Exhibitor</a>
+      <a class="loginbtn" href="#">Login</a>
+    </div>
+  </div>
+</div>
+
+  <section class="hero">
+    <div class="hero-logos">
+      <img src="./images/blentrix_images/header.png" alt="BLENTRIX Logo">
+    </div>
+  </section>
+  <div class="hero-title">
+    <div class="hero-sub">Conference Registration</div>
+    <div class="hero-main">BLENTRIX 2026 – Delegate Registration</div>
+  </div>
+
+  <div class="container">
+    <div class="form-shell">
+      <div class="form-body">
+        <form action="#" method="post" enctype="multipart/form-data">
+          <!-- Conference Note (Above Registration Type) -->
+          <div class="section" style="border-top:none;padding-top:0;margin-top:0;">
+            <div
+              style="background:#ffffff;border:1px solid var(--line);border-radius:6px;padding:0px 10px;line-height:1.7;">
+
+              <p style="margin:0 0 0px 0;">
+                <strong>BLENTRIX</strong> is an industry-focused <strong>Global Metal &amp; Polymer Integration
+                  Summit</strong>
+                bringing together manufacturing professionals,<br>technical experts, and academia.
+              </p>
+
+              <p style="margin:0 0 0px 0;font-weight:800;">
+                Student delegates receive a <strong>50% concession</strong>.
+              </p>
+
+              <p style="margin:0 0 0px 0;font-weight:600;">
+                Organizations with <strong>five or more delegates</strong> receive a
+                <strong>20% group concession</strong>.
+              </p>
+
+              <p style="margin:0;color:#374151;">
+                This is a paid international technical summit. Kindly complete all the
+                following required fields accurately.
+              </p>
+
+            </div>
+          </div>
+
+
+          <!-- Registration Type -->
+          <div class="section">
+            <h3>Registration Type <span class="req">*</span></h3>
+
+            <label class="check-item">
+              <input type="radio" name="reg_type" value="individual" checked>
+              Individual
+            </label>
+
+            <label class="check-item">
+              <input type="radio" name="reg_type" value="organization">
+              Organization
+            </label>
+          </div>
+
+          <!-- ORGANIZATION REGISTRATION (hidden by default) -->
+          <div id="organizationBlock" style="display:none;">
+
+            <!-- Organization Registration -->
+            <div class="section">
+              <h3>Organization Registration <span class="req">*</span></h3>
+
+              <div class="grid2">
+                <div class="field">
+                  <label>Organization Name <span class="req">*</span></label>
+                  <input type="text" name="org_name">
+                </div>
+
+                <div class="field">
+                  <label>Contact Number <span class="req">*</span></label>
+                  <input type="tel" name="org_contact">
+                </div>
+
+                <div class="field">
+                  <label>Email Address <span class="req">*</span></label>
+                  <input type="email" name="org_email">
+                </div>
+
+                <div class="field">
+                  <label>Country based in <span class="req">*</span></label>
+                  <input type="text" name="org_country">
+                </div>
+
+                <div class="field">
+                  <label>Number of Delegates <span class="req">*</span></label>
+                  <select name="org_delegates_count" id="orgDelegatesCount">
+                    <option value="">Choose</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                  </select>
+                </div>
+
+                <div></div>
+              </div>
+            </div>
+
+            <!-- Delegate Details (For Organizations) -->
+            <div class="section">
+              <h3>Delegate Details (For Organizations) <span class="req">*</span></h3>
+
+              <div id="delegateRows">
+                <!-- Row 1 -->
+                <div class="field" style="display:flex; gap:10px; align-items:center; margin-bottom:12px;"
+                  data-delegate-row="1">
+                  <div style="display: flex; width: 100%;">
+                    <div style="width: 100%;">
+                      <label>Name :<span class="req">*</span></label>
+                      <input type="text" name="delegate_details[]" placeholder="e.g., Arjun Kumar">
+                    </div>
+                    <div style="width: 100%;">
+                      <label>Designation :<span class="req">*</span></label>
+                      <input type="text" name="delegate_details[]" placeholder="e.g., Purchase Manager">
+                    </div>
+                  </div>
+
+                  <!-- Plus button -->
+                  <button type="button" id="addDelegateBtn" aria-label="Add another delegate"
+                    style="height:40px; width:40px; border-radius:6px; border:1px solid var(--line); background:#fff; font-size:20px; cursor:pointer; margin-top: 25px;">
+                    +
+                  </button>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+
+          <!-- INDIVIDUAL REGISTRATION (default visible) -->
+          <div id="individualSection" class="section">
+            <h3>Individual Registration</h3>
+
+            <div class="grid2">
+              <div class="field">
+                <label>Full Name (as per official ID) <span class="req">*</span></label>
+                <input type="text" name="full_name" required>
+              </div>
+
+              <div class="field">
+                <label>Email Address <span class="req">*</span></label>
+                <input type="email" name="email" required>
+              </div>
+
+              <div class="field">
+                <label>Contact Number (with Country Code) <span class="req">*</span></label>
+                <input type="tel" name="contact" required>
+              </div>
+
+              <div class="field">
+                <label>Nationality <span class="req">*</span></label>
+                <input type="text" name="nationality" required>
+              </div>
+
+              <div class="field">
+                <label>City &amp; Country of Residence <span class="req">*</span></label>
+                <input type="text" name="residence" required>
+              </div>
+
+              <div class="field">
+                <label>Qualification <span class="req">*</span></label>
+                <input type="text" name="qualification" required>
+              </div>
+
+              <div class="field">
+                <label>Organization / Institution Name <span class="req">*</span></label>
+                <input type="text" name="org_name_individual" required>
+              </div>
+
+              <div class="field">
+                <label>Designation / Title <span class="req">*</span></label>
+                <input type="text" name="designation_title" required>
+              </div>
+
+              <div class="field">
+                <label>Industry Segment <span class="req">*</span></label>
+                <select name="industry_segment" required>
+                  <option value="">Choose</option>
+                  <option>Auto</option>
+                  <option>Plastic Products</option>
+                  <option>Electricals</option>
+                  <option>Electronics</option>
+                  <option>Engineering</option>
+                  <option>Other</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <!-- THE REST OF YOUR FORM BELOW (UNCHANGED) -->
+          <div class="section">
+            <h3>REGISTRATION CATEGORY <span class="req">*</span></h3>
+            <div class="checks" style="grid-template-columns:1fr;">
+              <label class="check-item"><input type="radio" name="delegate_category" value="Industry Delegate" required>
+                Industry Delegate</label>
+              <label class="check-item"><input type="radio" name="delegate_category" value="Academic Delegate" required>
+                Academic Delegate</label>
+              <label class="check-item"><input type="radio" name="delegate_category" value="International Delegate"
+                  required> International Delegate</label>
+              <label class="check-item"><input type="radio" name="delegate_category" value="Student Delegate" required>
+                Student Delegate (Attach Identity Proof)</label>
+              <label class="check-item"><input type="radio" name="delegate_category"
+                  value="Sponsor / Exhibitor Representative" required> Sponsor / Exhibitor Representative</label>
+            </div>
+          </div>
+
+          <div class="section">
+            <h3>Primary Areas of Interest <span class="req">*</span></h3>
+            <div class="checks">
+              <label class="check-item"><input type="checkbox" name="primary_areas_interest[]"
+                  value="Innovative Product Design & DFMA"> Innovative Product Design &amp; DFMA</label>
+              <label class="check-item"><input type="checkbox" name="primary_areas_interest[]"
+                  value="Smart Automation & Robotics"> Smart Automation &amp; Robotics</label>
+              <label class="check-item"><input type="checkbox" name="primary_areas_interest[]"
+                  value="Mould & Die Tooling in India"> Mould &amp; Die Tooling in India</label>
+              <label class="check-item"><input type="checkbox" name="primary_areas_interest[]"
+                  value="Engineering Polymers for Sustainable Future"> Engineering Polymers for Sustainable
+                Future</label>
+              <label class="check-item"><input type="checkbox" name="primary_areas_interest[]"
+                  value="Recycling & Circular Economy Strategy"> Recycling &amp; Circular Economy Strategy</label>
+              <label class="check-item"><input type="checkbox" name="primary_areas_interest[]"
+                  value="Export & Import in Plastics – Global Trade"> Export &amp; Import in Plastics – Global
+                Trade</label>
+              <label class="check-item"><input type="checkbox" name="primary_areas_interest[]"
+                  value="Quality Excellence in Automotive Components"> Quality Excellence in Automotive
+                Components</label>
+            </div>
+          </div>
+
+          <div class="section">
+            <h3>Primary Objective for Attending BLENTRIX 2026 <span class="req">*</span></h3>
+            <div class="checks">
+              <label class="check-item"><input type="checkbox" name="primary_objective[]" value="Strategic Networking">
+                Strategic Networking</label>
+              <label class="check-item"><input type="checkbox" name="primary_objective[]" value="Technology Scouting">
+                Technology Scouting</label>
+              <label class="check-item"><input type="checkbox" name="primary_objective[]"
+                  value="Supplier Identification"> Supplier Identification</label>
+              <label class="check-item"><input type="checkbox" name="primary_objective[]" value="Business Expansion">
+                Business Expansion</label>
+              <label class="check-item"><input type="checkbox" name="primary_objective[]"
+                  value="Knowledge & Industry Insights"> Knowledge &amp; Industry Insights</label>
+              <label class="check-item"><input type="checkbox" name="primary_objective[]"
+                  value="Academic Collaboration"> Academic Collaboration</label>
+              <label class="check-item"><input type="checkbox" name="primary_objective[]"
+                  value="Investment Opportunities"> Investment Opportunities</label>
+            </div>
+          </div>
+
+          <!-- ✅ REPLACE ONLY YOUR "Payment Details" SECTION WITH THIS (styles unchanged) -->
+
+          <div class="section">
+            <h3>Payment Details</h3>
+
+            <!-- NOTE BOX (added) -->
+            <div class="field">
+              <div
+                style="background:#fff;border:1px solid var(--line);border-radius:6px;padding:16px 14px;line-height:1.6;">
+                <div style="font-weight:800;margin-bottom:10px;">Registration Tariff:</div>
+
+                <div style="margin-bottom:14px;">
+                  2 days <strong>₹2,000</strong> &nbsp;|&nbsp; 3 days <strong>₹2,700</strong><br />
+                  Participants must register for a minimum of <strong>2 days</strong>.
+                </div>
+
+                <div style="margin-bottom:12px;">
+                  <strong>Student</strong> delegates receive a <strong>50% concession</strong>.
+                </div>
+
+                <div style="margin-bottom:14px;">
+                  <strong>Organizations</strong> with <strong>five</strong> or more delegates receive a <strong>20%
+                    group concession</strong>.
+                </div>
+
+                <div>
+                  Registered delegates will be provided <strong>ID</strong>, <strong>Lunch</strong> &amp;
+                  <strong>Conference materials</strong>.
+                </div>
+              </div>
+            </div>
+
+            <!-- UPI ID (not an input, highlighted) -->
+            <div class="field" style="margin-top:14px;">
+              <div
+                style="background:#fff;border:1px solid var(--line);border-radius:6px;padding:14px 14px;font-size:16px;">
+                BHIM / UPI ID &nbsp;-&nbsp; <span style="font-weight:900;color:#111827;">imtof@sbi</span>
+              </div>
+            </div>
+
+            <div class="row-2col" style="margin-top:14px;">
+              <div class="field">
+                <label>Transaction ID</label>
+                <input type="text" name="transaction_id">
+              </div>
+              <div class="field">
+                <!-- keep layout 2-col without changing styles -->
+              </div>
+            </div>
+
+            <div class="section" style="border-top:none;padding-top:0;margin-top:14px;">
+              <div class="field">
+                <label>Scan the QR code to proceed</label>
+                <img src="./images/blentrix_images/bankqr.png" alt="UPI QR"
+                  style="max-width:320px;width:100%;height:auto;border-radius:6px;border:1px solid #e5e7eb;background:#fff;padding:10px;">
+              </div>
+            </div>
+
+            <div class="row-2col">
+              <div class="field">
+                <label>Attach proof of Identity ( Student Delegates )</label>
+                <input type="file" name="student_identity_proof" />
+              </div>
+              <div class="field">
+                <label>Attach proof of transaction</label>
+                <input type="file" name="payment_proof" />
+              </div>
+            </div>
+          </div>
+
+
+          <div class="section">
+            <h3>Terms &amp; Conditions Agreement</h3>
+            <div class="checks" style="grid-template-columns:1fr;">
+              <label class="check-item">
+                <input type="checkbox" name="terms_conditions_agree" value="Yes">
+                I confirm that the information provided is accurate and agree to the registration, refund, data privacy,
+                and media usage policies of BLENTRIX 2026.
+              </label>
+            </div>
+          </div>
+
+          <div class="bottom-area">
+            <div class="timings">
+              <strong>Visit Timings are</strong>
+              Business Visitors : 10 am to 6 pm<br />
+              Engineering Students : 2.30 pm to 6 pm
+            </div>
+
+            <div class="submit-wrap">
+              <div style="font-size:13px;font-weight:700;color:#111827;">
+                Kids below 18years are not allowed <span class="req">*</span>
+              </div>
+
+              <div class="captcha-box">
+                <div class="captcha-left">
+                  <div class="captcha-check"></div>
+                  <div>I'm not a robot</div>
+                </div>
+                <div class="captcha-right">
+                  <img alt="reCAPTCHA" src="https://www.gstatic.com/recaptcha/api2/logo_48.png">
+                  reCAPTCHA<br />Privacy - Terms
+                </div>
+              </div>
+
+              <button class="btn-submit" type="submit">Submit</button>
+            </div>
+          </div>
+
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <section class="sponsor-banner">
+
+    <div class="sponsor-banner__container">
+
+      <div class="sponsor-banner__item">
+        <img src="./images/blentrix_images/imtof-logo.png" alt="IMTOF Logo">
+      </div>
+
+      <div class="sponsor-banner__item">
+        <img src="./images/blentrix_images/hsg_logo.png" alt="HSG Logo">
+      </div>
+
+      <div class="sponsor-banner__item">
+        <img src="./images/blentrix_images/platinum_sponsor.png" alt="Platinum Sponsors">
+      </div>
+
+      <div class="sponsor-banner__group--silver">
+        <div class="sponsor-banner__item"><img src="./images/blentrix_images/yizumi.png"></div>
+        <div class="sponsor-banner__item"><img src="./images/blentrix_images/appl.png"></div>
+        <div class="sponsor-banner__item"><img src="./images/blentrix_images/krykard.png"></div>
+        <div class="sponsor-banner__item"><img src="./images/blentrix_images/steel_link.png"></div>
+        <div class="sponsor-banner__item"><img src="./images/blentrix_images/api.png"></div>
+        <div class="sponsor-banner__item"><img src="./images/blentrix_images/komter.png"></div>
+      </div>
+
+      <div class="sponsor-banner__item">
+        <img src="./images/blentrix_images/mmts-logo.png" alt="MMTS Logo">
+      </div>
+
+      <div class="sponsor-banner__item">
+        <img src="./images/blentrix_images/ippex-logo.png" alt="IPPEX Logo">
+      </div>
+
+    </div>
+  </section>
+
+
+
+  <!-- ONLY the scripts needed for reg_type toggle + add delegate -->
+  <script src="./js/blentrix_registration.js"></script>
+
+</body>
+
+</html>
