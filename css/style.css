@@ -8612,17 +8612,156 @@ iframe {
 .about-home1-area{
   background-color: #f9f9f9;
 }
+
+/* custom */
+
+.imtof-dates span {
+  border: 1px solid white;
+  padding: 2px;
+  margin: 0 3px;
+  /* background-color: var(--orange); */
+}
+
+.imtof-dates #date2 {
+  background-color: red;
+}
+
+.imtof-dates #date3 {
+  background-color: darkgreen;
+}
+
+.imtof-dates #date4 {
+  background-color: purple;
+}
+
+.imtof-dates #date5 {
+  background-color: orange;
+}
+
+.imtof-dates #date6 {
+  background-color: #0b59d9;
+}
+
+footer .imtof-dates span {
+  color: #fff;
+}
+
+.imtof_custom {
+  color: #160f0a;
+  font-size: 18px;
+  line-height: 30px;
+  font-weight: 400;
+  margin: 0 10px 43px;
+}
+
+.imtof_custom .profile_container img {
+  border-radius: 100px;
+}
+
+.imtof_custom table {
+  margin: 0 10px;
+}
+
+.imtof_custom thead {
+  background-color: #90b64a;
+  color: #fff;
+}
+
+#blentrix li {
+  list-style: disc;
+  font-size: 20px;
+  color: #064974;
+}
+
+.hero {
+    height: 240px;
+    background: rgba(10, 54, 93, .92);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0px 16px;
+}
+
+.hero-banner {
+    max-width: 1070px;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.85);
+    height: 100%;
+    border-radius: 12px;
+    display: flex;
+    justify-content: space-between;
+    padding-top:10px;
+    padding-bottom:10px ;
+}
+
+.hero-banner-content,.hero-banner-brand{
+  display: flex;
+  width: 100%;
+}
+
+.hero-banner-content{
+  max-width: 600px;
+}
+
+.hero-banner-brand{
+  max-width: 350px;
+  padding-right: 10px;
+}
+/* ================= HERO RESPONSIVE (NO STACK) ================= */
+
+@media (max-width: 1024px) {
+
+  .hero {
+    height: 220px;
+  }
+
+  .hero-banner-content {
+    max-width: 55%;
+  }
+
+  .hero-banner-brand {
+    max-width: 35%;
+  }
+}
+
+@media (max-width: 768px) {
+
+  .hero {
+    height: 190px;
+  }
+
+  .hero-banner-content {
+    max-width: 60%;
+  }
+
+  .hero-banner-brand {
+    max-width: 30%;
+  }
+}
+
+@media (max-width: 480px) {
+
+  .hero {
+    height: 160px;
+  }
+
+  .hero-banner-content {
+    max-width: 65%;
+  }
+
+  .hero-banner-brand {
+    max-width: 28%;
+  }
+}
+
 #adpopup {
   position: absolute;
   width: 47%;
-  /* border: 7px solid rgb(255, 255, 255);
-  background: rgb(255, 255, 255); */
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   border-radius: 5px;
   text-align: center;
-  /* box-shadow: rgb(0, 0, 0) 0px 0px 30px 0px; */
   z-index: 10000;
   height: 70vh;
 }
