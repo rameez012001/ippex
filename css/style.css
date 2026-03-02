@@ -32,6 +32,7 @@
 
 @import url("https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Archivo:400,400i,500,500i,600,600i,700,700i&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
 
 @import url(animate.css);
 @import url("bootstrap-select.min.css");
@@ -80,7 +81,7 @@ body {
   font-size: 16px;
   line-height: 30px;
   font-weight: 400;
-  font-family: "Archivo", sans-serif;
+  font-family: "Google Sans", sans-serif;
 }
 button:focus {
   outline: none;
@@ -99,7 +100,7 @@ h5,
 h6 {
   color: var(--dark-blue);
   font-weight: 400;
-  font-family: "Lora", serif;
+  font-family: "Google Sans", sans-serif;
   margin: 0;
 }
 h3 {
@@ -203,7 +204,7 @@ li {
   line-height: 16px;
   font-weight: 400;
   text-transform: capitalize;
-  font-family: "Lora", serif;
+  font-family: "Google Sans", sans-serif;
   padding: 15px 34px 17px;
   border-radius: 30px;
   transition: all 500ms linear;
@@ -248,7 +249,7 @@ li {
   border: 2px solid #bbbbbb;
   text-transform: capitalize;
   border-radius: 30px;
-  font-family: "Archivo", sans-serif;
+  font-family: "Google Sans", sans-serif;
   transition: all 300ms linear;
   transition-delay: 0.1s;
 }
@@ -570,7 +571,8 @@ li {
 
 @keyframes pulse {
   50% {
-    box-shadow: 0 0 0 5px rgba(255, 255, 255, 0.1),
+    box-shadow:
+      0 0 0 5px rgba(255, 255, 255, 0.1),
       0 0 0 20px rgba(238, 238, 238, 0.3);
   }
 }
@@ -1366,7 +1368,7 @@ select:focus {
   padding: 34px 0px 36px;
   transition: all 500ms ease;
   opacity: 1;
-  font-family: "Archivo", sans-serif;
+  font-family: "Google Sans", sans-serif;
 }
 .main-menu .navigation > li:hover > a,
 .main-menu .navigation > li.current > a {
@@ -1407,15 +1409,20 @@ select:focus {
   content: "";
   background: #ffffff;
   border-radius: 0;
-  -webkit-box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.05),
+  -webkit-box-shadow:
+    2px 2px 5px 1px rgba(0, 0, 0, 0.05),
     -2px 0px 5px 1px rgba(0, 0, 0, 0.05);
-  -ms-box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.05),
+  -ms-box-shadow:
+    2px 2px 5px 1px rgba(0, 0, 0, 0.05),
     -2px 0px 5px 1px rgba(0, 0, 0, 0.05);
-  -o-box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.05),
+  -o-box-shadow:
+    2px 2px 5px 1px rgba(0, 0, 0, 0.05),
     -2px 0px 5px 1px rgba(0, 0, 0, 0.05);
-  -moz-box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.05),
+  -moz-box-shadow:
+    2px 2px 5px 1px rgba(0, 0, 0, 0.05),
     -2px 0px 5px 1px rgba(0, 0, 0, 0.05);
-  box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.05),
+  box-shadow:
+    2px 2px 5px 1px rgba(0, 0, 0, 0.05),
     -2px 0px 5px 1px rgba(0, 0, 0, 0.05);
   z-index: -1;
 }
@@ -1444,7 +1451,7 @@ select:focus {
   text-align: left;
   text-transform: capitalize;
   transition: all 500ms ease;
-  font-family: "Archivo", sans-serif;
+  font-family: "Google Sans", sans-serif;
 }
 .main-menu .navigation > li > ul > li:last-child > a {
   border: none;
@@ -1487,15 +1494,20 @@ select:focus {
   display: none;
   background: #ffffff;
   border-radius: 0;
-  -webkit-box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.05),
+  -webkit-box-shadow:
+    2px 2px 5px 1px rgba(0, 0, 0, 0.05),
     -2px 0px 5px 1px rgba(0, 0, 0, 0.05);
-  -ms-box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.05),
+  -ms-box-shadow:
+    2px 2px 5px 1px rgba(0, 0, 0, 0.05),
     -2px 0px 5px 1px rgba(0, 0, 0, 0.05);
-  -o-box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.05),
+  -o-box-shadow:
+    2px 2px 5px 1px rgba(0, 0, 0, 0.05),
     -2px 0px 5px 1px rgba(0, 0, 0, 0.05);
-  -moz-box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.05),
+  -moz-box-shadow:
+    2px 2px 5px 1px rgba(0, 0, 0, 0.05),
     -2px 0px 5px 1px rgba(0, 0, 0, 0.05);
-  box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.05),
+  box-shadow:
+    2px 2px 5px 1px rgba(0, 0, 0, 0.05),
     -2px 0px 5px 1px rgba(0, 0, 0, 0.05);
   z-index: 100;
 }
@@ -1527,7 +1539,7 @@ select:focus {
   -webkit-transition: all 500ms ease;
   -ms-transition: all 500ms ease;
   -o-transition: all 500ms ease;
-  font-family: "Archivo", sans-serif;
+  font-family: "Google Sans", sans-serif;
 }
 .main-menu .navigation > li > ul > li > ul > li:last-child > a {
   border: none;
@@ -1717,7 +1729,7 @@ select:focus {
   line-height: 1.4em;
   font-weight: 400;
   text-transform: uppercase;
-  font-family: "Archivo", sans-serif;
+  font-family: "Google Sans", sans-serif;
 }
 .main-slider.style1 .slide-content .big-title {
   position: relative;
@@ -1726,7 +1738,7 @@ select:focus {
   line-height: 1.2em;
   font-weight: 400;
   text-transform: none;
-  font-family: "Lora", serif;
+  font-family: "Google Sans", sans-serif;
 }
 .main-slider .slide-content .btn-box {
   gap: 15px;
@@ -1743,7 +1755,7 @@ select:focus {
   font-weight: 600;
   text-transform: uppercase;
   border-radius: 30px;
-  font-family: "Archivo", sans-serif;
+  font-family: "Google Sans", sans-serif;
 }
 .main-slider .slide-content .btn-box a:hover {
   border-color: var(--dark-blue);
@@ -1788,22 +1800,29 @@ select:focus {
   max-width: 650px;
   width: 100%;
 }
-.intro-box .inner-content h3 {
+.intro-box .inner-content h3,.intro-box .inner-content h4 {
   position: relative;
   display: inline-block;
+  font-size: 30px;
   color: #ffffff;
-  font-size: 24px;
   line-height: 26px;
   font-weight: 400;
-  text-decoration: underline;
-  font-family: "Archivo", sans-serif;
+  font-family: "Google Sans", sans-serif;
 }
+
+.intro-box .inner-content h4{
+  font-size: 22px;
+  margin-top: 8px;
+  font-weight: 800;
+}
+
 .intro-box .inner-content p {
   color: #ffffff;
+  text-align: justify;
   font-size: 22px;
   line-height: 36px;
   font-weight: 400;
-  font-family: "Lora", serif;
+  font-family: "Google Sans", sans-serif;
   margin: 25px 0 50px;
 }
 
@@ -2124,7 +2143,7 @@ select:focus {
   font-size: 48px;
   line-height: 40px;
   font-weight: 700;
-  font-family: "Lora", serif;
+  font-family: "Google Sans", sans-serif;
   transition: all 700ms ease 100ms;
 }
 .single-event-box:hover .img-holder .date-box .left {
@@ -2245,7 +2264,7 @@ select:focus {
   color: var(--dark-blue);
   font-size: 18px;
   font-weight: 700;
-  font-family: "Lora", serif;
+  font-family: "Google Sans", sans-serif;
 }
 .event-carousel.owl-carousel.owl-dot-style1 .owl-stage-outer {
   position: relative;
@@ -2384,7 +2403,7 @@ select:focus {
 .single-art-box .img-holder .overlay-content .readmore-button a {
   color: #ffffff;
   font-size: 18px;
-  font-family: "Lora", serif;
+  font-family: "Google Sans", sans-serif;
 }
 
 /*** 
@@ -2466,7 +2485,7 @@ select:focus {
   color: var(--dark-blue);
   font-size: 24px;
   text-decoration: underline;
-  font-family: "Lora", serif;
+  font-family: "Google Sans", sans-serif;
 }
 
 .single-blog-post {
@@ -2622,7 +2641,7 @@ select:focus {
   padding: 0 40px;
   padding-right: 180px;
   border-radius: 30px;
-  font-family: "Archivo", sans-serif;
+  font-family: "Google Sans", sans-serif;
   transition: all 500ms ease;
 }
 .subscribe-area .subscribe-form input::-webkit-input-placeholder {
@@ -2650,7 +2669,7 @@ select:focus {
   text-transform: capitalize;
   border-top-right-radius: 30px;
   border-bottom-right-radius: 30px;
-  font-family: "Lora", serif;
+  font-family: "Google Sans", sans-serif;
   transition: all 300ms ease 100ms;
 }
 .subscribe-area .subscribe-form input[type="email"]:focus {
@@ -2729,7 +2748,7 @@ select:focus {
   color: var(--red);
   font-size: 16px;
   font-weight: 400;
-  font-family: "Archivo", sans-serif;
+  font-family: "Google Sans", sans-serif;
   transition: all 200ms linear;
   transition-delay: 0.1s;
 }
@@ -2765,7 +2784,7 @@ select:focus {
   color: var(--dark-blue);
   font-size: 24px;
   font-weight: 400;
-  font-family: "Archivo", sans-serif;
+  font-family: "Google Sans", sans-serif;
 }
 
 .single-footer-widget.opening-hours-box {
@@ -2803,7 +2822,7 @@ select:focus {
   color: var(--red);
   font-size: 16px;
   font-weight: 400;
-  font-family: "Archivo", sans-serif;
+  font-family: "Google Sans", sans-serif;
   transition: all 200ms linear;
   transition-delay: 0.1s;
 }
@@ -2911,7 +2930,7 @@ select:focus {
   font-weight: 600;
   text-transform: capitalize;
   padding: 34px 0px 36px;
-  font-family: "Archivo", sans-serif;
+  font-family: "Google Sans", sans-serif;
   padding-right: 51px;
   margin-right: 50px;
 }
@@ -3017,7 +3036,7 @@ select:focus {
   font-weight: 400;
   display: block;
   text-align: center;
-  font-family: "Archivo", sans-serif;
+  font-family: "Google Sans", sans-serif;
 }
 
 .header-upper-right-style2 {
@@ -3076,7 +3095,7 @@ select:focus {
   line-height: 28px;
   font-weight: 400;
   text-transform: capitalize;
-  font-family: "Archivo", sans-serif;
+  font-family: "Google Sans", sans-serif;
 }
 .main-slider.style2 .slide-content .big-title {
   position: relative;
@@ -3085,7 +3104,7 @@ select:focus {
   line-height: 1.4em;
   font-weight: 400;
   text-transform: none;
-  font-family: "Lora", serif;
+  font-family: "Google Sans", sans-serif;
 }
 .main-slider.style2 .slide-content .btn-box a {
   padding: 19px 35px 19px;
@@ -3095,7 +3114,7 @@ select:focus {
   font-weight: 500;
   text-transform: capitalize;
   border-radius: 30px;
-  font-family: "Archivo", sans-serif;
+  font-family: "Google Sans", sans-serif;
 }
 
 /*** 
@@ -3116,7 +3135,7 @@ select:focus {
   line-height: 28px;
   font-weight: 400;
   text-transform: capitalize;
-  font-family: "Archivo", sans-serif;
+  font-family: "Google Sans", sans-serif;
 }
 .main-slider.style3 .slide-content .big-title {
   position: relative;
@@ -3125,7 +3144,7 @@ select:focus {
   line-height: 1.4em;
   font-weight: 400;
   text-transform: none;
-  font-family: "Lora", serif;
+  font-family: "Google Sans", sans-serif;
 }
 .main-slider.style3 .slide-content .btn-box a {
   padding: 19px 35px 19px;
@@ -3135,7 +3154,7 @@ select:focus {
   font-weight: 500;
   text-transform: capitalize;
   border-radius: 30px;
-  font-family: "Archivo", sans-serif;
+  font-family: "Google Sans", sans-serif;
 }
 
 .museum-opening-hours-box {
@@ -3193,7 +3212,7 @@ select:focus {
   line-height: 1.6em;
   font-weight: 400;
   text-transform: none;
-  font-family: "Lora", serif;
+  font-family: "Google Sans", sans-serif;
 }
 .main-slider.style4 .slide-content .text {
   position: relative;
@@ -3202,7 +3221,7 @@ select:focus {
   line-height: 1.1em;
   font-weight: 400;
   text-transform: none;
-  font-family: "Archivo", sans-serif;
+  font-family: "Google Sans", sans-serif;
 }
 .main-slider.style4 .slide-content .btn-box a {
   color: #ffffff;
@@ -3213,7 +3232,7 @@ select:focus {
   padding: 20px 39px 20px;
   border-radius: 30px;
   border: 1px solid #ffffff;
-  font-family: "Lora", serif;
+  font-family: "Google Sans", sans-serif;
 }
 
 /*** 
@@ -3273,7 +3292,7 @@ select:focus {
   font-size: 14px;
   line-height: 14px;
   padding: 15px 34px 12px;
-  font-family: "Archivo", sans-serif;
+  font-family: "Google Sans", sans-serif;
 }
 .contact-info-holder li a:before {
   display: none;
@@ -3357,7 +3376,7 @@ select:focus {
   background: transparent;
   border: 2px solid #d2d1d0 !important;
   line-height: 18px;
-  font-family: "Archivo", sans-serif;
+  font-family: "Google Sans", sans-serif;
   padding: 20px 38px 19px;
 }
 .about-style1-content .inner-content .bottom-box .button a:before {
@@ -3407,14 +3426,14 @@ select:focus {
   color: #1e1713;
   font-size: 18px;
   font-weight: 700;
-  font-family: "Lora", serif;
+  font-family: "Google Sans", sans-serif;
 }
 .about-style1-content .inner-content .bottom-box .phone-number .title h1 {
   font-size: 30px;
   line-height: 30px;
   font-weight: 400;
   margin: 5px 0 0;
-  font-family: "Archivo", sans-serif;
+  font-family: "Google Sans", sans-serif;
 }
 .about-style1-content .inner-content .bottom-box .phone-number .title h1 a {
   color: var(--red);
@@ -3890,7 +3909,7 @@ select:focus {
   font-size: 16px;
   line-height: 30px;
   font-weight: 400;
-  font-family: "Lora", serif;
+  font-family: "Google Sans", sans-serif;
   margin: 0;
 }
 
@@ -4274,7 +4293,7 @@ select:focus {
   padding: 44px 0px 46px;
   transition: all 500ms ease;
   opacity: 1;
-  font-family: "Archivo", sans-serif;
+  font-family: "Google Sans", sans-serif;
 }
 .main-menu.style3 .navigation > li:hover > a,
 .main-menu.style3 .navigation > li.current > a {
@@ -4310,7 +4329,7 @@ select:focus {
   font-weight: 500;
   text-transform: capitalize;
   border-radius: 30px;
-  font-family: "Archivo", sans-serif;
+  font-family: "Google Sans", sans-serif;
 }
 
 /*** 
@@ -4378,7 +4397,7 @@ select:focus {
   color: var(--dark-blue);
   font-size: 18px;
   font-weight: 700;
-  font-family: "Archivo", sans-serif;
+  font-family: "Google Sans", sans-serif;
 }
 .visit-plan-box .right {
   position: relative;
@@ -4489,7 +4508,7 @@ select:focus {
   font-weight: 500;
   text-transform: capitalize;
   text-decoration: underline;
-  font-family: "Lora", serif;
+  font-family: "Google Sans", sans-serif;
 }
 
 .single-exhibition-box-style2 {
@@ -4548,7 +4567,7 @@ select:focus {
   font-size: 14px;
   font-weight: 500;
   text-transform: capitalize;
-  font-family: "Lora", serif;
+  font-family: "Google Sans", sans-serif;
   text-decoration: underline;
 }
 
@@ -4690,7 +4709,7 @@ select:focus {
   font-size: 36px;
   line-height: 30px;
   font-weight: 400;
-  font-family: "Archivo", sans-serif;
+  font-family: "Google Sans", sans-serif;
 }
 .single-event-box-style3 .date-holder .inner h1 span {
   position: relative;
@@ -5127,7 +5146,7 @@ select:focus {
   font-size: 16px;
   line-height: 30px;
   font-weight: 400;
-  font-family: "Archivo", sans-serif;
+  font-family: "Google Sans", sans-serif;
 }
 .single-footer-widget-style2 .our-company-info ul li .title h5 a {
   color: #ffffff;
@@ -5136,7 +5155,7 @@ select:focus {
   font-size: 24px;
   line-height: 30px;
   font-weight: 400;
-  font-family: "Archivo", sans-serif;
+  font-family: "Google Sans", sans-serif;
 }
 .single-footer-widget-style2 .our-company-info ul li .title h3 a {
   color: #ffffff;
@@ -5212,7 +5231,7 @@ select:focus {
   font-size: 24px;
   line-height: 40px;
   font-weight: 400;
-  font-family: "Lora", serif;
+  font-family: "Google Sans", sans-serif;
 }
 .single-footer-widget-style2 .footer-social-links .social-links-style1 {
   position: relative;
@@ -5367,7 +5386,7 @@ select:focus {
   transition: all 500ms ease;
   opacity: 1;
   z-index: 1;
-  font-family: "Archivo", sans-serif;
+  font-family: "Google Sans", sans-serif;
 }
 .main-menu.style4 .navigation > li:hover > a,
 .main-menu.style4 .navigation > li.current > a {
@@ -5425,7 +5444,7 @@ select:focus {
   font-weight: 500;
   text-transform: capitalize;
   border-radius: 30px;
-  font-family: "Archivo", sans-serif;
+  font-family: "Google Sans", sans-serif;
   transition: all 200ms linear;
   transition-delay: 0.1s;
 }
@@ -5765,7 +5784,7 @@ select:focus {
   font-size: 60px;
   line-height: 50px;
   font-weight: 400;
-  font-family: "Archivo", sans-serif;
+  font-family: "Google Sans", sans-serif;
 }
 
 .single-fact-counter-style2 .title {
@@ -6273,7 +6292,7 @@ select:focus {
   font-size: 16px;
   line-height: 30px;
   font-weight: 400;
-  font-family: "Archivo", sans-serif;
+  font-family: "Google Sans", sans-serif;
 }
 .single-footer-widget-style3 .our-contact-info-box ul li .title-holder h5 a {
   color: #ffffff;
@@ -6408,7 +6427,7 @@ select:focus {
   text-transform: capitalize;
   border-radius: 7px;
   margin-top: 20px;
-  font-family: "Lora", serif;
+  font-family: "Google Sans", sans-serif;
   transition: all 200ms linear;
   transition-delay: 0.1s;
 }
@@ -6557,7 +6576,7 @@ select:focus {
   text-transform: capitalize;
   transition: all 500ms ease;
   padding: 0 25px;
-  font-family: "Archivo", sans-serif;
+  font-family: "Google Sans", sans-serif;
 }
 .breadcrumb-area .breadcrumb-menu ul li:before {
   position: absolute;
@@ -6651,7 +6670,7 @@ select:focus {
   margin: 0 30px;
   cursor: pointer;
   transition: all 300ms ease;
-  font-family: "Lora", serif;
+  font-family: "Google Sans", sans-serif;
 }
 .filters .filter.active,
 .filters .filter:hover {
@@ -6919,7 +6938,7 @@ select:focus {
   line-height: 30px;
   font-weight: 400;
   text-transform: capitalize;
-  font-family: "Archivo", sans-serif;
+  font-family: "Google Sans", sans-serif;
   transition: all 200ms linear;
   transition-delay: 0.1s;
 }
@@ -7098,7 +7117,7 @@ select:focus {
   -ms-transition: all 500ms ease;
   -o-transition: all 500ms ease;
   -moz-transition: all 500ms ease;
-  font-family: "Lora", serif;
+  font-family: "Google Sans", sans-serif;
 }
 .styled-pagination li a:hover,
 .styled-pagination li a.active {
@@ -7284,7 +7303,7 @@ select:focus {
   font-size: 18px;
   font-weight: 700;
   text-transform: capitalize;
-  font-family: "Lora", serif;
+  font-family: "Google Sans", sans-serif;
 }
 .blog-single-area .tag-box .right {
   position: relative;
@@ -7301,7 +7320,7 @@ select:focus {
   font-weight: 700;
   margin: 0;
   text-transform: capitalize;
-  font-family: "Lora", serif;
+  font-family: "Google Sans", sans-serif;
 }
 
 .blog-single-area .tag-box .right .sociallinks-style-two li a i {
@@ -7393,7 +7412,7 @@ select:focus {
   color: var(--dark-blue);
   font-size: 14px;
   font-weight: 400;
-  font-family: "Archivo", sans-serif;
+  font-family: "Google Sans", sans-serif;
 }
 .blog-single-area
   .inner-comment-box
@@ -7422,7 +7441,7 @@ select:focus {
   color: #e4b33d;
   font-size: 16px;
   font-weight: 700;
-  font-family: "Lora", serif;
+  font-family: "Google Sans", sans-serif;
   transition: all 500ms ease;
 }
 
@@ -7879,7 +7898,7 @@ select:focus {
   font-weight: 400;
   cursor: pointer;
   transition: all 0.1s ease-out;
-  font-family: "Lora", serif;
+  font-family: "Google Sans", sans-serif;
 }
 .visit-day-select .tab-btns li:hover span,
 .visit-day-select .tab-btns li.active-btn span {
@@ -7939,7 +7958,7 @@ select:focus {
   font-size: 18px;
   font-weight: 600;
   margin: 0;
-  font-family: "Archivo", sans-serif;
+  font-family: "Google Sans", sans-serif;
 }
 .select-tickets-box ul li.free .left h4 {
   color: #bbbbbb;
@@ -7990,7 +8009,7 @@ select:focus {
   outline: none;
   margin: 0 auto;
   text-align: center;
-  font-family: "Lora", serif;
+  font-family: "Google Sans", sans-serif;
 }
 
 .select-tickets-box .bootstrap-touchspin .input-group-btn-vertical {
@@ -8106,7 +8125,7 @@ select:focus {
   font-weight: 400;
   font-style: italic;
   margin: 0;
-  font-family: "Lora", serif;
+  font-family: "Google Sans", sans-serif;
 }
 
 .order-total .right p {
@@ -8263,7 +8282,7 @@ select:focus {
   line-height: 16px;
   font-weight: 400;
   text-transform: capitalize;
-  font-family: "Archivo", sans-serif;
+  font-family: "Google Sans", sans-serif;
   padding: 22px 40px 22px;
   border-radius: 30px;
   transition: all 500ms linear;
@@ -8372,7 +8391,7 @@ select:focus {
   font-size: 16px;
   line-height: 30px;
   font-weight: 400;
-  font-family: "Archivo", sans-serif;
+  font-family: "Google Sans", sans-serif;
 }
 .contactpage-company-info-box ul li .title h5 a {
   color: var(--red);
@@ -8381,7 +8400,7 @@ select:focus {
   font-size: 24px;
   line-height: 30px;
   font-weight: 400;
-  font-family: "Archivo", sans-serif;
+  font-family: "Google Sans", sans-serif;
 }
 .contactpage-company-info-box ul li .title h3 a {
   color: var(--red);
@@ -8399,7 +8418,7 @@ select:focus {
   font-size: 24px;
   line-height: 40px;
   font-weight: 400;
-  font-family: "Lora", serif;
+  font-family: "Google Sans", sans-serif;
 }
 .contactpage-company-info-box .social-links .social-links-style1 {
   position: relative;
@@ -8601,15 +8620,15 @@ iframe {
   margin-bottom: 20px !important;
 }
 
-.about-home-area ul li{
+.about-home-area ul li {
   font-size: 18px;
   line-height: 30px;
-  font-family: "Lora", serif;
+  font-family: "Google Sans", sans-serif;
   list-style: circle;
   margin-left: 30px;
 }
 
-.about-home1-area{
+.about-home1-area {
   background-color: #f9f9f9;
 }
 
@@ -8674,43 +8693,43 @@ footer .imtof-dates span {
 }
 
 .hero {
-    height: 240px;
-    background: rgba(10, 54, 93, .92);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0px 16px;
+  height: 240px;
+  background: rgba(10, 54, 93, 0.92);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0px 16px;
 }
 
 .hero-banner {
-    max-width: 1070px;
-    width: 100%;
-    background: rgba(255, 255, 255, 0.85);
-    height: 100%;
-    border-radius: 12px;
-    display: flex;
-    justify-content: space-between;
-    padding-top:10px;
-    padding-bottom:10px ;
+  max-width: 1070px;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.85);
+  height: 100%;
+  border-radius: 12px;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
-.hero-banner-content,.hero-banner-brand{
+.hero-banner-content,
+.hero-banner-brand {
   display: flex;
   width: 100%;
 }
 
-.hero-banner-content{
+.hero-banner-content {
   max-width: 600px;
 }
 
-.hero-banner-brand{
+.hero-banner-brand {
   max-width: 350px;
   padding-right: 10px;
 }
 /* ================= HERO RESPONSIVE (NO STACK) ================= */
 
 @media (max-width: 1024px) {
-
   .hero {
     height: 220px;
   }
@@ -8725,7 +8744,6 @@ footer .imtof-dates span {
 }
 
 @media (max-width: 768px) {
-
   .hero {
     height: 190px;
   }
@@ -8740,7 +8758,6 @@ footer .imtof-dates span {
 }
 
 @media (max-width: 480px) {
-
   .hero {
     height: 160px;
   }
@@ -8765,7 +8782,7 @@ footer .imtof-dates span {
   z-index: 10000;
   height: 70vh;
 }
-.adpopup_container{
+.adpopup_container {
   overflow: hidden;
   height: 100%;
 }
@@ -8783,7 +8800,7 @@ footer .imtof-dates span {
   left: 0;
   width: 100%;
   height: 100%;
-  opacity: .7;
+  opacity: 0.7;
   z-index: 1000;
 }
 
@@ -8800,11 +8817,10 @@ footer .imtof-dates span {
   text-align: center;
   font-size: 12px;
   font-weight: normal;
-  font-family: 'Arial Black', Arial, sans-serif;
+  font-family: "Arial Black", Arial, sans-serif;
   cursor: pointer;
   box-shadow: 0 0 10px 0 #000;
 }
-
 
 .carousel-track {
   display: flex;
@@ -8827,6 +8843,10 @@ footer .imtof-dates span {
 }
 
 @keyframes carousel-loop {
-  0%   { transform: translateY(0); }
-  100% { transform: translateY(-43%); }
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-43%);
+  }
 }
