@@ -762,8 +762,19 @@
 
 /* Mobile Layout: 320px. */
 @media only screen and (max-width: 767px) {
+  .main-slider.style1 .slide-content .text {
+    font-size: 18px;
+  }
+
+  .carousel-area1 {
+    padding: 20px;
+  }
+  .carousel-area{
+    padding-bottom: 20px;
+  }
+
   .sec-title {
-    padding-bottom: 54px;
+    padding-bottom: 34px;
   }
   .sec-title p br {
     display: none;
@@ -772,8 +783,8 @@
     padding: 19px 0 0;
   }
   .sec-title .big-title h1 {
-    font-size: 40px;
-    line-height: 60px;
+    font-size: 18px;
+    line-height: 22px;
   }
   .sec-title .big-title h1 br {
     display: none;

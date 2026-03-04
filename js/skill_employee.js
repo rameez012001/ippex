@@ -12,7 +12,7 @@ const sections = $$("form section.card");
 // 2 => Basic + Type-Specific
 // 3 => Technical + Academic
 // 4 => Upload & Submit
-const stepMap = [[0], [1, 2], [3, 4], [5]];
+const stepMap = [[0], [1]];
 
 let currentStep = 1;
 
@@ -23,7 +23,7 @@ const btnNext = $("#btnNext");
 const btnSubmit = $("#btnSubmit");
 
 function setStep(step) {
-  currentStep = Math.min(4, Math.max(1, step));
+  currentStep = Math.min(2, Math.max(1, step));
 
   sections.forEach((card, idx) => {
     const shouldShow = stepMap[currentStep - 1].includes(idx);
@@ -36,30 +36,36 @@ function setStep(step) {
     el.classList.toggle("done", s < currentStep);
   });
 
-  metaText.textContent = `Step ${currentStep} of 4`;
+  metaText.textContent = `Step ${currentStep} of 2`;
 
   btnBack.style.visibility = currentStep === 1 ? "hidden" : "visible";
   btnBack.disabled = currentStep === 1;
 
-  btnNext.classList.toggle("hidden", currentStep === 4);
-  btnSubmit.classList.toggle("hidden", currentStep !== 4);
+  btnNext.classList.toggle("hidden", currentStep === 2);
+  btnSubmit.classList.toggle("hidden", currentStep !== 2);
 
   window.scrollTo({ top: 0, behavior: "smooth" });
 }
 
-// ---------- Type-specific blocks ----------
-const blockRecruiter = $("#blockRecruiter");
-const blockEmployee = $("#blockEmployee");
-const blockStudent = $("#blockStudent");
-const typeHelp = $("#typeHelp");
+function toggleBasicFields(type) {
+  document.querySelectorAll(".employer-only, .employee-only, .student-only")
+    .forEach(el => el.classList.add("hidden"));
 
-// The type-specific card (section index 2) — shown only when a type is selected
-const typeSpecificCard = sections[2];
+  if (type === "recruiter") {
+    document.querySelectorAll(".employer-only")
+      .forEach(el => el.classList.remove("hidden"));
+  }
 
-// required fields per type
-const recruiterReq = ["company_name", "company_location", "designation_recruiter"];
-const employeeReq  = ["current_role", "total_experience", "employment_status", "preferred_roles"];
-const studentReq   = ["college_name", "course_type", "branch", "grad_year", "internship_job"];
+  if (type === "employee") {
+    document.querySelectorAll(".employee-only")
+      .forEach(el => el.classList.remove("hidden"));
+  }
+
+  if (type === "student") {
+    document.querySelectorAll(".student-only")
+      .forEach(el => el.classList.remove("hidden"));
+  }
+}
 
 function setRequired(ids, isRequired) {
   ids.forEach((id) => {
@@ -75,35 +81,13 @@ function setRequired(ids, isRequired) {
 }
 
 function updateTypeBlocks() {
-  const type = $('input[name="registration_type"]:checked')?.value;
+  const type = document.querySelector(
+    'input[name="registration_type"]:checked'
+  )?.value;
 
-  // Hide all inner blocks first
-  blockRecruiter.classList.add("hidden");
-  blockEmployee.classList.add("hidden");
-  blockStudent.classList.add("hidden");
+  if (!type) return;
 
-  // Clear all required flags
-  setRequired(recruiterReq, false);
-  setRequired(employeeReq, false);
-  setRequired(studentReq, false);
-
-  if (!type) {
-    typeHelp.classList.remove("hidden");
-    return;
-  }
-
-  typeHelp.classList.add("hidden");
-
-  if (type === "recruiter") {
-    blockRecruiter.classList.remove("hidden");
-    setRequired(recruiterReq, true);
-  } else if (type === "employee") {
-    blockEmployee.classList.remove("hidden");
-    setRequired(employeeReq, true);
-  } else if (type === "student") {
-    blockStudent.classList.remove("hidden");
-    setRequired(studentReq, true);
-  }
+  toggleBasicFields(type);
 }
 
 // $$('input[name="registration_type"]').forEach((r) => {
@@ -113,17 +97,24 @@ function updateTypeBlocks() {
 $$('input[name="registration_type"]').forEach((r) => {
   r.addEventListener("change", () => {
     updateTypeBlocks();
-    // Small delay so user sees the selection before moving
     setTimeout(() => {
       if (validateStep(1)) setStep(2);
-    }, 300);
+    }, 200);
   });
 });
 // ---------- Tag input ----------
 function escapeHtml(str) {
-  return str.replace(/[&<>"']/g, (m) => ({
-    "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#039;",
-  })[m]);
+  return str.replace(
+    /[&<>"']/g,
+    (m) =>
+      ({
+        "&": "&amp;",
+        "<": "&lt;",
+        ">": "&gt;",
+        '"': "&quot;",
+        "'": "&#039;",
+      })[m],
+  );
 }
 
 function setupTagInput({ inputEl, boxEl, hiddenEl }) {
@@ -167,50 +158,24 @@ function setupTagInput({ inputEl, boxEl, hiddenEl }) {
 
   return {
     getTags: () => tags.slice(),
-    setTags: (arr) => { tags = arr.slice(); render(); },
+    setTags: (arr) => {
+      tags = arr.slice();
+      render();
+    },
   };
 }
 
 const keySkillsTags = setupTagInput({
   inputEl: $("#key_skills_input"),
-  boxEl:   $("#skillsTagBox"),
+  boxEl: $("#skillsTagBox"),
   hiddenEl: $("#key_skills"),
 });
 
-const techSkillsTags = setupTagInput({
-  inputEl: $("#tech_skills_input"),
-  boxEl:   $("#techTagBox"),
-  hiddenEl: $("#technical_skills"),
-});
-
-// ---------- Additional Education Rows ----------
-const eduTable   = $("#eduTable");
-const addEduRowBtn = $("#addEduRow");
-
-function makeEduRow() {
-  const row = document.createElement("div");
-  row.className = "table-row";
-  row.innerHTML = `
-    <select name="edu_qual[]">
-      <option value="">Select</option>
-      <option>10th</option><option>12th</option><option>ITI</option>
-      <option>Diploma</option><option>UG</option><option>PG</option><option>Other</option>
-    </select>
-    <input type="text"   name="edu_course[]"      placeholder="Course / Branch" />
-    <input type="text"   name="edu_institution[]"  placeholder="Institution" />
-    <input type="number" name="edu_year[]"  min="1980" max="2100" placeholder="Year" />
-    <input type="text"   name="edu_score[]"        placeholder="% / CGPA" />
-    <button type="button" class="icon-btn" title="Remove">✕</button>
-  `;
-  row.querySelector("button").addEventListener("click", () => row.remove());
-  eduTable.appendChild(row);
-}
-
-addEduRowBtn.addEventListener("click", makeEduRow);
-
 // ---------- Validation ----------
 function clearInvalid() {
-  $$("input,select,textarea", form).forEach((el) => el.classList.remove("invalid"));
+  $$("input,select,textarea", form).forEach((el) =>
+    el.classList.remove("invalid"),
+  );
 }
 
 function markInvalid(el) {
@@ -262,13 +227,6 @@ function validateStep(step) {
     }
   }
 
-  if (step === 3) {
-    if (techSkillsTags.getTags().length === 0) {
-      markInvalid($("#tech_skills_input"));
-      return false;
-    }
-  }
-
   return true;
 }
 
@@ -282,7 +240,7 @@ btnNext.addEventListener("click", () => {
 form.addEventListener("submit", (e) => {
   e.preventDefault();
 
-  for (let s = 1; s <= 4; s++) {
+  for (let s = 1; s <= 2; s++) {
     if (!validateStep(s)) return;
   }
 
@@ -306,7 +264,6 @@ form.addEventListener("submit", (e) => {
   });
 
   console.log("Form payload:", payload);
-  alert("✅ Submitted successfully!\n\n(Data printed in console — connect to your backend API to save.)");
 });
 
 // ---------- Init ----------

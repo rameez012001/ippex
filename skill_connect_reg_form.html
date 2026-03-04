@@ -53,26 +53,12 @@
           <small>Basic + type info</small>
         </div>
       </div>
-      <div class="step" data-step="3">
-        <div class="dot">3</div>
-        <div>
-          <strong>Qualifications</strong>
-          <small>Tech + academic</small>
-        </div>
-      </div>
-      <div class="step" data-step="4">
-        <div class="dot">4</div>
-        <div>
-          <strong>Upload & Submit</strong>
-          <small>Resume + consent</small>
-        </div>
-      </div>
     </div>
 
     <form id="recruitForm" novalidate>
       <!-- SECTION 1 -->
       <section class="card hidden" data-section="1">
-        <h2>1) Registration Type</h2>
+        <h2>Registration Type</h2>
         <p class="hint">Choose one option to customize the form fields.</p>
         <div class="divider"></div>
 
@@ -108,29 +94,17 @@
 
       <!-- SECTION 2 -->
       <section class="card hidden" data-section="2">
-        <h2>2) Basic Details</h2>
+        <h2>Basic Details</h2>
         <p class="hint">These details are common for all registration types.</p>
         <div class="divider"></div>
 
-        <div class="grid">
+        <div class="grid" id="basicDetails">
           <div>
-            <label class="req" for="full_name">Full Name</label>
+            <label class="req" for="full_name">Name</label>
             <input id="full_name" type="text" name="full_name" placeholder="Enter your full name" required />
           </div>
 
-          <div>
-            <label class="req" for="mobile">Mobile Number</label>
-            <input id="mobile" type="tel" name="mobile" placeholder="10-digit mobile number" inputmode="numeric"
-              required />
-            <div class="help">Example: 9876543210</div>
-          </div>
-
-          <div>
-            <label class="req" for="email">Email ID</label>
-            <input id="email" type="email" name="email" placeholder="name@example.com" required />
-          </div>
-
-          <div>
+          <div class="employee-only student-only hidden">
             <label for="dob">Date of Birth</label>
             <input id="dob" type="date" name="dob" />
           </div>
@@ -147,9 +121,174 @@
           </div>
 
           <div>
-            <label class="req" for="city">City</label>
-            <input id="city" type="text" name="city" placeholder="Enter your city" required />
+            <label class="req" for="mobile">Mobile Number</label>
+            <input id="mobile" type="tel" name="mobile" placeholder="+91 9876543210" inputmode="numeric" required />
           </div>
+
+          <div>
+            <label class="req" for="email">Email ID</label>
+            <input id="email" type="email" name="email" placeholder="name@example.com" required />
+          </div>
+
+          <div class="employer-only hidden">
+            <label class="req" for="organization_name">Name of the Organization</label>
+            <input id="organization_name" type="text" name="organization_name" placeholder="Company name" />
+          </div>
+
+          <div class="employer-only hidden">
+            <label for="organization_website">Website</label>
+            <input id="organization_website" type="text" name="organization_website"
+              placeholder="https://example.com (optional)" />
+          </div>
+
+          <div class="employer-only hidden">
+            <label for="designation">Designation</label>
+            <input id="designation" type="text" name="designation" placeholder="Software Engineer" />
+          </div>
+
+          <!-- Employer -->
+
+          <div class="employer-only hidden">
+            <label for="requirements">Requirements</label>
+            <input id="requirements" type="text" name="requirements" placeholder="Requirements" />
+          </div>
+
+          <div class="employer-only hidden">
+            <label for="job_location">Organization Location</label>
+            <input id="job_location" type="text" name="job_location" placeholder="eg: Chennai, Mumbai, etc." />
+          </div>
+          <div class="employer-only hidden">
+            <label for="job_description">Job Description</label>
+            <input id="job_description" type="text" name="job_description" placeholder="" />
+          </div>
+          <div class="employer-only hidden">
+            <label for="industry">Organization Type</label>
+            <select id="industry" name="industry">
+              <option value="">Select (optional)</option>
+              <option>Manufacturing</option>
+              <option>Machine Tools</option>
+              <option>Plastics / Polymers</option>
+              <option>Automation</option>
+              <option>Electronics</option>
+              <option>Other</option>
+            </select>
+          </div>
+
+          <!-- Employer over -->
+
+          <!-- Employee -->
+
+          <div class="employee-only hidden">
+            <label for="present_organization">Present Organization</label>
+            <input id="present_organization" type="text" name="present_organization"
+              placeholder="present organization(optional)" />
+          </div>
+          <div class="employee-only hidden">
+            <label class="req" for="present_role">Present Role / Designation</label>
+            <input id="present_role" type="text" name="present_role" placeholder="e.g., CNC Operator, Designer" />
+          </div>
+          <div class="employee-only hidden">
+            <label class="req" for="total_experience">Total Experience</label>
+            <select id="total_experience" name="total_experience">
+              <option value="">Select</option>
+              <option>Fresher</option>
+              <option>0–1 years</option>
+              <option>1–3 years</option>
+              <option>3–5 years</option>
+              <option>5–8 years</option>
+              <option>8–12 years</option>
+              <option>12+ years</option>
+            </select>
+          </div>
+          <div class="employee-only hidden">
+            <label for="relevant_experience">Relevant Experience</label>
+            <input id="relevant_experience" type="text" name="relevant_experience"
+              placeholder="e.g., 2 years in VMC (optional)" />
+          </div>
+          <div class="employee-only hidden">
+            <label class="req" for="employment_status">Employment Status</label>
+            <select id="employment_status" name="employment_status">
+              <option value="">Select</option>
+              <option>Working</option>
+              <option>Not Working</option>
+              <option>Freelancer</option>
+            </select>
+          </div>
+
+          <div class="employee-only hidden">
+            <label class="req">Addtional Qualification</label>
+            <div class="tagbox" id="skillsTagBox">
+              <input class="tag-input" id="key_skills_input" type="text" placeholder="Type skill and press Enter" />
+            </div>
+            <input type="hidden" name="key_skills" id="key_skills" />
+            <!-- <div class="help">Press <b>Enter</b> to add. Click × to remove.</div> -->
+          </div>
+
+          <div class="employee-only hidden">
+            <label class="req" for="preferred_roles">Preferred Role(s)</label>
+            <input id="preferred_roles" type="text" name="preferred_roles"
+              placeholder="e.g., CNC Programmer, QC Inspector" />
+          </div>
+
+          <div class="employee-only hidden">
+            <label for="preferred_industry_emp">Preferred Industry</label>
+            <input id="preferred_industry_emp" type="text" name="preferred_industry_emp" placeholder="Optional" />
+          </div>
+
+          <!-- Employee Over -->
+
+          <!-- Fresher -->
+
+          <div class="student-only hidden">
+            <label class="req" for="college_name">Institute / College Name</label>
+            <input id="college_name" type="text" name="college_name" placeholder="College name" />
+          </div>
+          <div class="student-only hidden">
+            <label class="req" for="course_type">Course Type</label>
+            <select id="course_type" name="course_type">
+              <option value="">Select</option>
+              <option>Diploma</option>
+              <option>UG</option>
+              <option>PG</option>
+              <option>ITI</option>
+              <option>PhD</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="student-only hidden">
+            <label class="req" for="branch">Department / Branch</label>
+            <input id="branch" type="text" name="branch" placeholder="e.g., Mechanical, EEE" />
+          </div>
+          <div class="student-only hidden">
+            <label for="year_of_study">Year of Study</label>
+            <select id="year_of_study" name="year_of_study">
+              <option value="">Select</option>
+              <option>1st Year</option>
+              <option>2nd Year</option>
+              <option>3rd Year</option>
+              <option>4th Year</option>
+              <option>Final Year</option>
+            </select>
+          </div>
+          <div class="student-only hidden">
+            <label class="req" for="internship_job">Looking for Internship / Job</label>
+            <select id="internship_job" name="internship_job">
+              <option value="">Select</option>
+              <option>Internship</option>
+              <option>Job</option>
+              <option>Both</option>
+            </select>
+          </div>
+          <div class="student-only hidden">
+            <label class="req" for="marks_obtained">Mark Obtained in Percentage(Overall)</label>
+            <input id="marks_obtained" type="number" name="marks_obtained" min="0" max="100"
+              placeholder="e.g., 99.2%" />
+          </div>
+          <div class="student-only hidden">
+            <label for="interest_areas">Area of Interest</label>
+            <input id="interest_areas" type="text" name="interest_areas" placeholder="Optional" />
+          </div>
+          <!-- Student Over -->
 
           <div>
             <label for="district">District</label>
@@ -166,341 +305,17 @@
             <input id="country" type="text" name="country" value="India" />
           </div>
 
-          <div class="row-span-2">
-            <label for="address">Current Address</label>
+          <!-- <div class="row-span-2 employee-only student-only hidden">
+            <label for="address">Present Address</label>
             <textarea id="address" name="address" placeholder="House no, street, area, etc. (optional)"></textarea>
-          </div>
-        </div>
-      </section>
-
-      <!-- SECTION 3 -->
-      <section class="card hidden" data-section="2">
-        <h2>3) Type-Specific Details</h2>
-        <p class="hint">This section changes based on your registration type.</p>
-        <div class="divider"></div>
-
-        <div id="blockRecruiter" class="hidden">
-          <h3 class="subhead">For Employer</h3>
-          <div class="grid">
-            <div>
-              <label class="req" for="company_name">Company Name</label>
-              <input id="company_name" type="text" name="company_name" placeholder="Company name" />
-            </div>
-            <div>
-              <label class="req" for="company_location">Company Location</label>
-              <input id="company_location" type="text" name="company_location" placeholder="City / State" />
-            </div>
-            <div>
-              <label for="company_website">Company Website</label>
-              <input id="company_website" type="text" name="company_website"
-                placeholder="https://example.com (optional)" />
-            </div>
-            <div>
-              <label for="industry">Industry</label>
-              <select id="industry" name="industry">
-                <option value="">Select (optional)</option>
-                <option>Manufacturing</option>
-                <option>Machine Tools</option>
-                <option>Plastics / Polymers</option>
-                <option>Automation</option>
-                <option>Electronics</option>
-                <option>Other</option>
-              </select>
-            </div>
-            <div class="row-span-2">
-              <label class="req" for="designation_recruiter">Designation</label>
-              <input id="designation_recruiter" type="text" name="designation_recruiter"
-                placeholder="HR Manager / Recruiter / etc." />
-            </div>
-          </div>
-        </div>
-
-        <div id="blockEmployee" class="hidden">
-          <h3 class="subhead">For Skilled Employee</h3>
-          <div class="grid">
-            <div>
-              <label class="req" for="current_role">Current Role / Designation</label>
-              <input id="current_role" type="text" name="current_role" placeholder="e.g., CNC Operator, Designer" />
-            </div>
-            <div>
-              <label class="req" for="total_experience">Total Experience</label>
-              <select id="total_experience" name="total_experience">
-                <option value="">Select</option>
-                <option>Fresher</option>
-                <option>0–1 years</option>
-                <option>1–3 years</option>
-                <option>3–5 years</option>
-                <option>5–8 years</option>
-                <option>8–12 years</option>
-                <option>12+ years</option>
-              </select>
-            </div>
-            <div>
-              <label for="relevant_experience">Relevant Experience</label>
-              <input id="relevant_experience" type="text" name="relevant_experience"
-                placeholder="e.g., 2 years in VMC (optional)" />
-            </div>
-            <div>
-              <label for="current_company">Current Company</label>
-              <input id="current_company" type="text" name="current_company" placeholder="Company name (optional)" />
-            </div>
-            <div>
-              <label class="req" for="employment_status">Employment Status</label>
-              <select id="employment_status" name="employment_status">
-                <option value="">Select</option>
-                <option>Working</option>
-                <option>Not Working</option>
-                <option>Freelancer</option>
-              </select>
-            </div>
-
-            <div>
-              <label class="req">Key Skills (add tags)</label>
-              <div class="tagbox" id="skillsTagBox">
-                <input class="tag-input" id="key_skills_input" type="text" placeholder="Type skill and press Enter" />
-              </div>
-              <input type="hidden" name="key_skills" id="key_skills" />
-              <div class="help">Press <b>Enter</b> to add. Click × to remove.</div>
-            </div>
-
-            <div>
-              <label class="req" for="preferred_roles">Preferred Role(s)</label>
-              <input id="preferred_roles" type="text" name="preferred_roles"
-                placeholder="e.g., CNC Programmer, QC Inspector" />
-            </div>
-
-            <div>
-              <label for="preferred_industry_emp">Preferred Industry</label>
-              <input id="preferred_industry_emp" type="text" name="preferred_industry_emp" placeholder="Optional" />
-            </div>
-          </div>
-        </div>
-
-        <div id="blockStudent" class="hidden">
-          <h3 class="subhead">For Student</h3>
-          <div class="grid">
-            <div>
-              <label class="req" for="college_name">Institute / College Name</label>
-              <input id="college_name" type="text" name="college_name" placeholder="College name" />
-            </div>
-            <div>
-              <label class="req" for="course_type">Course Type</label>
-              <select id="course_type" name="course_type">
-                <option value="">Select</option>
-                <option>Diploma</option>
-                <option>UG</option>
-                <option>PG</option>
-                <option>ITI</option>
-                <option>PhD</option>
-                <option>Other</option>
-              </select>
-            </div>
-            <div>
-              <label class="req" for="branch">Department / Branch</label>
-              <input id="branch" type="text" name="branch" placeholder="e.g., Mechanical, EEE" />
-            </div>
-            <div>
-              <label for="year_of_study">Year of Study</label>
-              <select id="year_of_study" name="year_of_study">
-                <option value="">Select</option>
-                <option>1st Year</option>
-                <option>2nd Year</option>
-                <option>3rd Year</option>
-                <option>4th Year</option>
-                <option>Final Year</option>
-              </select>
-            </div>
-            <div>
-              <label class="req" for="grad_year">Expected Graduation Year</label>
-              <input id="grad_year" type="number" name="grad_year" min="1980" max="2100" placeholder="e.g., 2026" />
-            </div>
-            <div>
-              <label class="req" for="internship_job">Looking for Internship / Job</label>
-              <select id="internship_job" name="internship_job">
-                <option value="">Select</option>
-                <option>Internship</option>
-                <option>Job</option>
-                <option>Both</option>
-              </select>
-            </div>
-            <div class="row-span-2">
-              <label for="interest_areas">Area of Interest</label>
-              <input id="interest_areas" type="text" name="interest_areas" placeholder="Optional" />
-            </div>
-          </div>
-        </div>
-
-        <div id="typeHelp" class="help">Select a registration type above to unlock this section.</div>
-      </section>
-
-      <!-- SECTION 4 -->
-      <section class="card hidden" data-section="3">
-        <h2>4) Technical Qualification</h2>
-        <p class="hint">Tell us your technical domains and hands-on exposure.</p>
-        <div class="divider"></div>
-
-        <div class="grid">
-          <div>
-            <label class="req" for="primary_domain">Primary Domain</label>
-            <select id="primary_domain" name="primary_domain" required>
-              <option value="">Select</option>
-              <option>Mechanical</option>
-              <option>Electrical</option>
-              <option>Electronics</option>
-              <option>Mechatronics</option>
-              <option>Plastics</option>
-              <option>Polymers</option>
-              <option>Automation</option>
-              <option>Software</option>
-              <option>Other</option>
-            </select>
-          </div>
-
-          <div>
-            <label for="secondary_domain">Secondary Domain</label>
-            <input id="secondary_domain" type="text" name="secondary_domain" placeholder="Optional" />
-          </div>
+          </div> -->
 
           <div class="row-span-2">
-            <label class="req">Technical Skills (add tags)</label>
-            <div class="tagbox" id="techTagBox">
-              <input class="tag-input" id="tech_skills_input" type="text" placeholder="Type skill and press Enter" />
-            </div>
-            <input type="hidden" name="technical_skills" id="technical_skills" required />
-            <div class="help">Press <b>Enter</b> to add. Click × to remove.</div>
+            <label for="address">Address for Communication</label>
+            <textarea id="address" name="address" placeholder="Org no, street, area, etc. (optional)"></textarea>
           </div>
 
-          <div>
-            <label for="tools_known">Tools / Software Known</label>
-            <input id="tools_known" type="text" name="tools_known" placeholder="Optional" />
-          </div>
-
-          <div>
-            <label for="certifications">Certifications</label>
-            <input id="certifications" type="text" name="certifications" placeholder="Optional" />
-          </div>
-        </div>
-
-        <div class="mt-14">
-          <label>Machine / Process Exposure</label>
-          <div class="chip-grid">
-            <label class="choice"><input type="checkbox" name="exposure" value="CNC Turning" /> CNC Turning</label>
-            <label class="choice"><input type="checkbox" name="exposure" value="VMC / HMC" /> VMC / HMC</label>
-            <label class="choice"><input type="checkbox" name="exposure" value="Grinding" /> Grinding</label>
-            <label class="choice"><input type="checkbox" name="exposure" value="EDM / Wirecut" /> EDM / Wirecut</label>
-            <label class="choice"><input type="checkbox" name="exposure" value="Sheet Metal / Fabrication" /> Sheet
-              Metal / Fabrication</label>
-            <label class="choice"><input type="checkbox" name="exposure" value="Injection Moulding" /> Injection
-              Moulding</label>
-            <label class="choice"><input type="checkbox" name="exposure" value="Blow Moulding" /> Blow Moulding</label>
-            <label class="choice"><input type="checkbox" name="exposure" value="Extrusion" /> Extrusion</label>
-            <label class="choice"><input type="checkbox" name="exposure" value="Robotics / Automation" /> Robotics /
-              Automation</label>
-            <label class="choice"><input type="checkbox" name="exposure" value="PLC / SCADA" /> PLC / SCADA</label>
-            <label class="choice"><input type="checkbox" name="exposure" value="Quality Inspection" /> Quality
-              Inspection</label>
-            <div>
-              <label for="exposure_other">Others</label>
-              <input id="exposure_other" type="text" name="exposure_other" placeholder="Optional" />
-            </div>
-          </div>
-        </div>
-
-        <div class="grid mt-14">
-          <div>
-            <label class="req">Skill Level</label>
-            <div class="choice-row">
-              <label class="choice"><input type="radio" name="skill_level" value="Beginner" required /> Beginner</label>
-              <label class="choice"><input type="radio" name="skill_level" value="Intermediate" required />
-                Intermediate</label>
-              <label class="choice"><input type="radio" name="skill_level" value="Advanced" required /> Advanced</label>
-              <label class="choice"><input type="radio" name="skill_level" value="Expert" required /> Expert</label>
-            </div>
-          </div>
-
-          <div>
-            <label>Languages Known</label>
-            <div class="choice-row">
-              <label class="choice"><input type="checkbox" name="languages" value="Tamil" /> Tamil</label>
-              <label class="choice"><input type="checkbox" name="languages" value="English" /> English</label>
-              <label class="choice"><input type="checkbox" name="languages" value="Hindi" /> Hindi</label>
-              <label class="choice"><input type="checkbox" name="languages" value="Other" /> Other</label>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- SECTION 5 -->
-      <section class="card hidden" data-section="3">
-        <h2>5) Academic Qualification</h2>
-        <p class="hint">Add your highest qualification and (optional) additional qualifications.</p>
-        <div class="divider"></div>
-
-        <div class="grid">
-          <div>
-            <label class="req" for="highest_qual">Highest Qualification</label>
-            <select id="highest_qual" name="highest_qualification" required>
-              <option value="">Select</option>
-              <option>10th</option>
-              <option>12th</option>
-              <option>ITI</option>
-              <option>Diploma</option>
-              <option>UG</option>
-              <option>PG</option>
-              <option>PhD</option>
-              <option>Other</option>
-            </select>
-          </div>
-
-          <div>
-            <label class="req" for="specialization">Specialization</label>
-            <input id="specialization" type="text" name="specialization" required />
-          </div>
-
-          <div class="row-span-2">
-            <label class="req" for="institution">Institution Name</label>
-            <input id="institution" type="text" name="institution_name" required />
-          </div>
-
-          <div>
-            <label class="req" for="passing_year">Year of Passing</label>
-            <input id="passing_year" type="number" name="passing_year" min="1980" max="2100" required />
-          </div>
-
-          <div>
-            <label class="req" for="cgpa">Percentage / CGPA</label>
-            <input id="cgpa" type="text" name="percentage_cgpa" required />
-          </div>
-        </div>
-
-        <div class="mt-14">
-          <label>Additional Qualifications (Optional)</label>
-          <div class="table-like" id="eduTable">
-            <div class="table-head">
-              <div>Qualification</div>
-              <div>Course / Branch</div>
-              <div>Institution</div>
-              <div>Year</div>
-              <div>% / CGPA</div>
-              <div></div>
-            </div>
-          </div>
-
-          <div class="actions">
-            <button type="button" class="btn" id="addEduRow">+ Add Qualification</button>
-          </div>
-          <div class="help">Use this only if you want to add more educational entries.</div>
-        </div>
-      </section>
-
-      <!-- SECTION 6 -->
-      <section class="card hidden" data-section="4">
-        <h2>6) Upload & Submit</h2>
-        <p class="hint">Upload your resume and accept the declaration to submit.</p>
-        <div class="divider"></div>
-
-        <div class="grid">
-          <div class="row-span-2">
+          <div class="row-span-2 employee-only student-only hidden">
             <label class="req" for="resume">Upload Resume</label>
             <div class="file">
               <input id="resume" type="file" name="resume" accept=".pdf,.doc,.docx" required />
@@ -508,32 +323,27 @@
             </div>
           </div>
 
-          <div>
+          <div class="employee-only student-only hidden">
             <label for="photo">Upload Photo (Optional)</label>
             <div class="file">
               <input id="photo" type="file" name="photo" accept="image/*" />
             </div>
           </div>
 
-          <div>
-            <label for="certs">Upload Certificates (Optional)</label>
-            <div class="file">
-              <input id="certs" type="file" name="certificates" multiple />
+          <div class="row-span-2">
+            <label class="req">Declaration</label>
+            <div class="choice-row">
+              <label class="choice">
+                <input type="checkbox" name="confirm_correct" required />
+                I confirm all details provided are correct.
+              </label>
             </div>
-          </div>
-        </div>
-
-        <div class="mt-14">
-          <label class="req">Declaration</label>
-          <div class="choice-row">
-            <label class="choice">
-              <input type="checkbox" name="confirm_correct" required />
-              I confirm all details provided are correct.
-            </label>
-            <label class="choice">
-              <input type="checkbox" name="agree_contact" required />
-              I agree to be contacted by recruiters/exhibitors.
-            </label>
+            <div class="choice-row employee-only student-only hidden">
+              <label class="choice">
+                <input type="checkbox" name="agree_contact" required />
+                I agree to be contacted by recruiters/exhibitors.
+              </label>
+            </div>
           </div>
         </div>
       </section>
