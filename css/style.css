@@ -283,7 +283,7 @@ li {
   position: relative;
   display: block;
   margin-top: -5px;
-  padding-bottom: 70px;
+  padding-bottom: 30px;
 }
 .sec-title p {
   color: var(--red);
@@ -302,7 +302,7 @@ li {
 }
 .sec-title .big-title h1 {
   color: var(--dark-blue);
-  font-size: 48px;
+  font-size: 40px;
   line-height: 70px;
   font-weight: 400;
 }
@@ -8875,6 +8875,7 @@ footer .imtof-dates span {
 
 .carousel-area {
   margin: 50px 0 ;
+  padding-bottom: 30px;
   background-color: #f5f6f6;
 }
 
