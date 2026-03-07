@@ -1,0 +1,423 @@
+const data = {
+  gallery: [
+    {
+      img: "images/publicity/auto1.jpeg",
+      title: "Auto Ads",
+      subtitle: "Chennai",
+      link: "#",
+      buttonText: "IPPEX 2026",
+    },
+    {
+      img: "images/publicity/auto2.jpeg",
+      title: "Auto Ads",
+      subtitle: "Chennai",
+      link: "#",
+      buttonText: "IPPEX 2026",
+    },
+    {
+      img: "images/publicity/auto3.jpeg",
+      title: "Auto Ads",
+      subtitle: "Triruchirapalli, Tamil Nadu",
+      link: "#",
+      buttonText: "IPPEX 2026",
+    },
+    {
+      img: "images/publicity/auto4.jpeg",
+      title: "Auto Ads",
+      subtitle: "Triruchirapalli, Tamil Nadu",
+      link: "#",
+      buttonText: "IPPEX 2026",
+    },
+    {
+      img: "images/publicity/auto5.jpeg",
+      title: "Auto Ads",
+      subtitle: "Bangalore",
+      link: "#",
+      buttonText: "IPPEX 2026",
+    },
+    {
+      img: "images/publicity/bus1.jpeg",
+      title: "MTC Bus Ads",
+      subtitle: "Chennai",
+      link: "#",
+      buttonText: "IPPEX 2026",
+    },
+    {
+      img: "images/publicity/bus2.jpeg",
+      title: "MTC Bus Ads",
+      subtitle: "Chennai",
+      link: "#",
+      buttonText: "IPPEX 2026",
+    },
+    {
+      img: "images/publicity/bus3.jpeg",
+      title: "MTC Bus Ads",
+      subtitle: "Triruchirapalli, Tamil Nadu",
+      link: "#",
+      buttonText: "IPPEX 2026",
+    },
+    {
+      img: "images/publicity/bus4.jpeg",
+      title: "MTC Bus Ads",
+      subtitle: "Triruchirapalli, Tamil Nadu",
+      link: "#",
+      buttonText: "IPPEX 2026",
+    },
+    {
+      img: "images/publicity/bus5.jpeg",
+      title: "MTC Bus Ads",
+      subtitle: "Bangalore",
+      link: "#",
+      buttonText: "IPPEX 2026",
+    },
+    {
+      img: "images/publicity/h20.jpeg",
+      title: "Hoardings",
+      subtitle: "Bangalore",
+      link: "#",
+      buttonText: "IPPEX 2026",
+    },
+    {
+      img: "images/publicity/auto6.jpeg",
+      title: "Auto Ads",
+      subtitle: "Bangalore",
+      link: "#",
+      buttonText: "IPPEX 2026",
+    },
+    {
+      img: "images/publicity/auto7.jpeg",
+      title: "Auto Ads",
+      subtitle: "Bangalore",
+      link: "#",
+      buttonText: "IPPEX 2026",
+    },
+    {
+      img: "images/publicity/auto8.jpeg",
+      title: "Auto Ads",
+      subtitle: "Madurai, Tamil Nadu",
+      link: "#",
+      buttonText: "IPPEX 2026",
+    },
+    {
+      img: "images/publicity/auto9.jpeg",
+      title: "Auto Ads",
+      subtitle: "Madurai, Tamil Nadu",
+      link: "#",
+      buttonText: "IPPEX 2026",
+    },
+    {
+      img: "images/publicity/ad1.jpeg",
+      title: "News L Band ad",
+      subtitle: "Tamil Nadu",
+      link: "#",
+      buttonText: "IPPEX 2026",
+    },
+    {
+      img: "images/publicity/ad2.jpeg",
+      title: "News L Band ad",
+      subtitle: "Tamil Nadu",
+      link: "#",
+      buttonText: "IPPEX 2026",
+    },
+    {
+      img: "images/publicity/ad4.jpeg",
+      title: "News L Band ad",
+      subtitle: "Tamil Nadu",
+      link: "#",
+      buttonText: "IPPEX 2026",
+    },
+    {
+      img: "images/publicity/ad5.jpeg",
+      title: "News L Band ad",
+      subtitle: "Tamil Nadu",
+      link: "#",
+      buttonText: "IPPEX 2026",
+    },
+    {
+      img: "images/publicity/h1.jpeg",
+      title: "Hoardings",
+      subtitle: "Ambattur OT",
+      link: "#",
+      buttonText: "IPPEX 2026",
+    },
+    {
+      img: "images/publicity/h2.jpeg",
+      title: "Police Booths",
+      subtitle: "Ambattur OT",
+      link: "#",
+      buttonText: "IPPEX 2026",
+    },
+    {
+      img: "images/publicity/h3.jpeg",
+      title: "Police Booths",
+      subtitle: "Ambattur OT",
+      link: "#",
+      buttonText: "IPPEX 2026",
+    },
+    {
+      img: "images/publicity/h4.jpeg",
+      title: "Hoardings",
+      subtitle: "Bangalore",
+      link: "#",
+      buttonText: "IPPEX 2026",
+    },
+    {
+      img: "images/publicity/h5.jpeg",
+      title: "Signal Postings",
+      subtitle: "Tamil Nadu Highways",
+      link: "#",
+      buttonText: "IPPEX 2026",
+    },
+    {
+      img: "images/publicity/h6.jpeg",
+      title: "Signal Postings",
+      subtitle: "Tamil Nadu Highways",
+      link: "#",
+      buttonText: "IPPEX 2026",
+    },
+    {
+      img: "images/publicity/h7.jpeg",
+      title: "Signal Postings",
+      subtitle: "Tamil Nadu Highways",
+      link: "#",
+      buttonText: "IPPEX 2026",
+    },
+    {
+      img: "images/publicity/h8.jpeg",
+      title: "Signal Postings",
+      subtitle: "Tamil Nadu Highways",
+      link: "#",
+      buttonText: "IPPEX 2026",
+    },
+    {
+      img: "images/publicity/h9.jpeg",
+      title: "Hoardings",
+      subtitle: "Ambattur OT",
+      link: "#",
+      buttonText: "IPPEX 2026",
+    },
+    {
+      img: "images/publicity/h10.jpeg",
+      title: "Hoardings",
+      subtitle: "Ambattur OT",
+      link: "#",
+      buttonText: "IPPEX 2026",
+    },
+    {
+      img: "images/publicity/h11.jpeg",
+      title: "Hoardings",
+      subtitle: "Ambattur OT",
+      link: "#",
+      buttonText: "IPPEX 2026",
+    },
+    {
+      img: "images/publicity/h12.jpeg",
+      title: "Hoardings",
+      subtitle: "Parrys, Chennai",
+      link: "#",
+      buttonText: "IPPEX 2026",
+    },
+    {
+      img: "images/publicity/h13.jpeg",
+      title: "Hoardings",
+      subtitle: "Ambattur OT",
+      link: "#",
+      buttonText: "IPPEX 2026",
+    },
+    {
+      img: "images/publicity/h14.jpeg",
+      title: "Hoardings",
+      subtitle: "Ambattur OT",
+      link: "#",
+      buttonText: "IPPEX 2026",
+    },
+    {
+      img: "images/publicity/h15.jpeg",
+      title: "Hoardings",
+      subtitle: "Chennai",
+      link: "#",
+      buttonText: "IPPEX 2026",
+    },
+    {
+      img: "images/publicity/h16.jpeg",
+      title: "Hoardings",
+      subtitle: "Parrys, Chennai",
+      link: "#",
+      buttonText: "IPPEX 2026",
+    },
+    {
+      img: "images/publicity/h17.jpeg",
+      title: "Hoardings",
+      subtitle: "TANSTIA ",
+      link: "#",
+      buttonText: "IPPEX 2026",
+    },
+    {
+      img: "images/publicity/h18.jpeg",
+      title: "Hoardings",
+      subtitle: "Ambattur OT",
+      link: "#",
+      buttonText: "IPPEX 2026",
+    },
+    {
+      img: "images/publicity/h19.jpeg",
+      title: "Hoardings",
+      subtitle: "TANSTIA",
+      link: "#",
+      buttonText: "IPPEX 2026",
+    },
+    {
+      img: "images/publicity/h21.jpeg",
+      title: "Hoardings",
+      subtitle: "Thirumuddivakkam, Chennai",
+      link: "#",
+      buttonText: "IPPEX 2026",
+    },
+    {
+      img: "images/publicity/h22.jpeg",
+      title: "Hoardings",
+      subtitle: "Thirumuddivakkam, Chennai",
+      link: "#",
+      buttonText: "IPPEX 2026",
+    },
+    {
+      img: "images/publicity/h23.jpeg",
+      title: "Hoardings",
+      subtitle: "Thirumuddivakkam, Chennai",
+      link: "#",
+      buttonText: "IPPEX 2026",
+    },
+    {
+      img: "images/publicity/h24.jpeg",
+      title: "Hoardings",
+      subtitle: "Thirumuddivakkam, Chennai",
+      link: "#",
+      buttonText: "IPPEX 2026",
+    },
+    {
+      img: "images/publicity/h25.jpeg",
+      title: "Hoardings",
+      subtitle: "Thirumuddivakkam, Chennai",
+      link: "#",
+      buttonText: "IPPEX 2026",
+    },
+    {
+      img: "images/publicity/h26.jpeg",
+      title: "Hoardings",
+      subtitle: "Thirumuddivakkam, Chennai",
+      link: "#",
+      buttonText: "IPPEX 2026",
+    },
+    {
+      img: "images/publicity/h27.jpeg",
+      title: "Hoardings",
+      subtitle: "Thirumuddivakkam, Chennai",
+      link: "#",
+      buttonText: "IPPEX 2026",
+    },
+    {
+      img: "images/publicity/h28.jpeg",
+      title: "Hoardings",
+      subtitle: "Thirumuddivakkam, Chennai",
+      link: "#",
+      buttonText: "IPPEX 2026",
+    },
+    {
+      img: "images/publicity/h29.jpeg",
+      title: "Hoardings",
+      subtitle: "Thirumuddivakkam, Chennai",
+      link: "#",
+      buttonText: "IPPEX 2026",
+    },
+    {
+      img: "images/publicity/h30.jpeg",
+      title: "Hoardings",
+      subtitle: "Thirumuddivakkam, Chennai",
+      link: "#",
+      buttonText: "IPPEX 2026",
+    },
+    {
+      img: "images/publicity/h31.jpeg",
+      title: "Hoardings",
+      subtitle: "Thirumuddivakkam, Chennai",
+      link: "#",
+      buttonText: "IPPEX 2026",
+    },
+    {
+      img: "images/publicity/h32.jpeg",
+      title: "Hoardings",
+      subtitle: "Thirumuddivakkam, Chennai",
+      link: "#",
+      buttonText: "IPPEX 2026",
+    },
+    {
+      img: "images/publicity/h33.jpeg",
+      title: "Hoardings",
+      subtitle: "Thirumuddivakkam, Chennai",
+      link: "#",
+      buttonText: "IPPEX 2026",
+    },
+    {
+      img: "images/publicity/h34.jpeg",
+      title: "Hoardings",
+      subtitle: "Thirumuddivakkam, Chennai",
+      link: "#",
+      buttonText: "IPPEX 2026",
+    },
+    {
+      img: "images/publicity/h35.jpeg",
+      title: "Hoardings",
+      subtitle: "Thirumuddivakkam, Chennai",
+      link: "#",
+      buttonText: "IPPEX 2026",
+    },
+    {
+      img: "images/publicity/h36.jpeg",
+      title: "Hoardings",
+      subtitle: "Thirumuddivakkam, Chennai",
+      link: "#",
+      buttonText: "IPPEX 2026",
+    },
+    {
+      img: "images/publicity/h37.jpeg",
+      title: "Hoardings",
+      subtitle: "Thirumuddivakkam, Chennai",
+      link: "#",
+      buttonText: "IPPEX 2026",
+    },
+  ],
+};
+
+const container = document.querySelector(".masonary-layout");
+
+/* shuffle algorithm */
+function shuffle(array) {
+  for (let i = array.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [array[i], array[j]] = [array[j], array[i]];
+  }
+}
+
+/* randomize gallery order */
+shuffle(data.gallery);
+
+data.gallery.forEach((item) => {
+  const html = `
+  <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 wow fadeInUp animated" data-wow-delay="300ms" data-wow-duration="1500ms">
+      <div class="single-art-box">
+          <div class="img-holder">
+              <img src="${item.img}" alt="${item.title}">
+              <div class="overlay-content">
+                  <div class="title">
+                      <h3><a href="#">${item.title}<br>${item.subtitle}</a></h3>
+                  </div>
+                  <div class="readmore-button">
+                      <a href="${item.link}">${item.buttonText}</a>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+  `;
+  container.insertAdjacentHTML("beforeend", html);
+});
