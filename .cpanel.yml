@@ -1,0 +1,5 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/hrb7rb8dw1ha/public_html/ippex.co
+    - /bin/cp -R . $DEPLOYPATH
