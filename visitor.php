@@ -123,7 +123,7 @@ body {
     
 	<img src="images/sidebar/international_mc.png" class="img-fluid" style="width:30%;  margin-top:30px;" alt="India's Largest International Plastics & Polymers Exhibition">
 
-	<a href="https://www.mmtma.in/"><img src="images/sidebar/mmtma_logo.png" class="img-fluid" style="width:15%; top:20px; margin-top:35px;" alt="MMTMA Logo"></a> &#160;  &#160;  &#160;  
+	<a href="https://www.mmtma.co/"><img src="images/sidebar/mmtma_logo.png" class="img-fluid" style="width:15%; top:20px; margin-top:35px;" alt="MMTMA Logo"></a> &#160;  &#160;  &#160;  
 	
 	
 	&#160; 
